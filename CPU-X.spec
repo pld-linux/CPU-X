@@ -6,11 +6,12 @@ License:	GPL v3
 Group:		Applications
 Source0:	https://github.com/X0rg/CPU-X/archive/v%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	a680ad9004e48d3c8caa758215d8269b
+Patch0:		x32.patch
 URL:		https://x0rg.github.io/CPU-X/
 BuildRequires:	cmake
 BuildRequires:	curl-devel
 BuildRequires:	gtk+3-devel >= 3.12.0
-BuildRequires:	libcpuid >= 0.4.0
+BuildRequires:	libcpuid-devel >= 0.4.0
 BuildRequires:	nasm
 BuildRequires:	ncurses-devel
 BuildRequires:	pciutils-devel
@@ -26,6 +27,9 @@ Open Source software designed for GNU/Linux.
 
 %prep
 %setup -q
+%ifarch x32
+%patch0 -p1
+%endif
 
 %build
 mkdir -p build
