@@ -1,7 +1,7 @@
 Summary:	Gathers information on CPU, motherboard and more
 Name:		CPU-X
 Version:	3.2.3
-Release:	2
+Release:	3
 License:	GPL v3
 Group:		Applications
 Source0:	https://github.com/X0rg/CPU-X/archive/v%{version}/%{name}-%{version}.tar.gz
