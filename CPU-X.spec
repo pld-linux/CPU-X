@@ -28,7 +28,7 @@ Open Source software designed for GNU/Linux.
 %prep
 %setup -q
 %ifarch x32
-%patch0 -p1
+%patch -P0 -p1
 %endif
 
 %build
